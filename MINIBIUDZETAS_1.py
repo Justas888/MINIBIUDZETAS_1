@@ -14,12 +14,18 @@ while True:
     if pasirinkimas == "q":
         break
     if pasirinkimas == "1":
-        pass
+        data = input("Įveskite datą (pvz., 2022-01-01): ")
+        aprasymas = input("Įveskite pajamų pavadinimą (pvz., atlyginimas")
+        kiekis = float(input("Įveskite sumą: "))
+        pajamos.append([data, aprasymas, kiekis])
 
-    if pasirinkimas == "2":
-        pass
+    elif pasirinkimas == "2":
+        data = input("Įveskite datą (pvz., 2022-01-01): ")
+        aprasymas = input("Įveskite pajamų pavadinimą (pvz., būtinosios išlaidos")
+        kiekis = float(input("Įveskite sumą: "))
+        islaidos.append([data, aprasymas, kiekis])
 
-    if pasirinkimas == "3":
+    elif pasirinkimas == "3":
         pass
 
 print(f"Jūsų pajamos - {pajamos}")
