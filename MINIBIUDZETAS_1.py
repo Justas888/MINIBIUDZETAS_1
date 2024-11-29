@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 pajamos = []
 islaidos = []
 
@@ -32,7 +31,7 @@ while True:
         if pajamos:
             print("\n Pajamos: ")
             for i, income in enumerate(pajamos):
-                print(f"{i+1}. Data: {income[0]}, Pavadinimas: {income[1]}, Suma: {income[2]}")
+                print(f"{i + 1}. Data: {income[0]}, Pavadinimas: {income[1]}, Suma: {income[2]}")
         else:
             print("Pajamų nėra.")
 
@@ -40,13 +39,20 @@ while True:
         if islaidos:
             print("\n Išlaidos: ")
             for i, expense in enumerate(islaidos):
-                print(f"{i+1}. Data: {expense[0]}, Pavadinimas: {expense[1]}, Sumas: {expense[2]}")
+                print(f"{i + 1}. Data: {expense[0]}, Pavadinimas: {expense[1]}, Sumas: {expense[2]}")
         else:
             print("Išlaidų nėra")
+    elif pasirinkimas == "5":
+        visos_pajamos = sum(income[2] for income in pajamos)
+        visos_islaidos = sum(expense[2] for expense in islaidos)
+        balansas = visos_pajamos - visos_islaidos
+        print(f"\n Visos pajamos: {visos_pajamos}")
+        print(f"\n Visos išlaidos: {visos_islaidos}")
+        print(f"\n Balansas (pajamos - išlaidos): {balansas}")
+
 
     else:
         print("Neteisingas pasirinkimas. Bandykite dar kartą")
-
 
 print(f"Jūsų pajamos - {pajamos}")
 print(f"Jūsų išlaidos - {islaidos}")
